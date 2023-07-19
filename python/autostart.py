@@ -7,4 +7,4 @@ keybinds = {
         'Mod4-d': 'spawn rofi -show drun',
         }
 
-hc.bind_keys(keybinds)
+hc.configure('keybind', keybinds)
