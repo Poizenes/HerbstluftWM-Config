@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 
 import herbstclient as hc
+import config
 
-keybinds = {
-        'Mod4-Return': 'spawn alacritty',
-        'Mod4-d': 'spawn rofi -show drun',
-        }
-
-hc.configure('keybind', keybinds)
+hc.call('keyunbind --all')
+hc.configure('keybind', config.keybinds)
+hc.add_tags(config.tags, config.kb_tag_use, config.kb_tag_move)
